@@ -21,7 +21,7 @@ db.once('open', function() { //Lets us know when we're connected
 
 router.get('/quote', function(req, res, next) {
 
-    
+
     console.log("In a route");
     console.log(req.body);
     console.log("Request");
@@ -32,15 +32,21 @@ router.get('/quote', function(req, res, next) {
     if (requestname) {
         obj = { Name: requestname };
         Quote.find(obj, function(err, list) {
-            console.log(list);
-            res.json(list);
-        })
+            if (err) { console.error(err); }
+            else {
+                console.log(list);
+                res.json(list);
+            }
+        });
     }
     else {
         Quote.find({}, function(err, list) { //Calls the find() method on your database
-            console.log(list);
-            res.json(list);
-        })
+            if (err) { console.error(err); }
+            else {
+                console.log(list);
+                res.json(list);
+            }
+        });
     }
 
 });
