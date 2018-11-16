@@ -6,28 +6,30 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="javascripts/quotes.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="stylesheets/style.css" type="text/css" />
 </head>
 
-<body>
-    <h1>Life Advice!</h1>
-    <h6>Get a random quote that will change your life!</h6>
-
+<body id="background">
+    <h1 id="header">Random Advice for the Road</h1>
+    <h6 id="header2">“Life's randomness is fairly well orchestrated.” ― Anthony T.Hincks</h6>
+    <h6>Enter a name and a quote, or get  </h6>
+    
     <form id="quoteForm" action="">
-        <label for="name">Name: </label><input type="text" id="name" placeholder="Name">
-        <label for="quote">Quote: </label><input type="text" id="quote" placeholder="Quote">
-        <button id="postQuote">Post Quote</button>
+        <label  class="wordz "for="name">Name: </label><input type="text" id="name" placeholder=" Enter a name">
+        <label class="wordz" for="quote">Quote: </label><input type="text" id="quote" placeholder=" Enter a quote">
+        <button class="thezeButtons" id="postQuote">Post Quote</button>
     </form>
 
-
-    <button id="getQuotes">Get Quotes</button>
-    <button id="deleteQuotes">Delete All</button>
+    <div id="buttons">
+    <button class="thezeButtons" id="getQuotes">Get Quotes</button>
+ <!--   <button class="thezeButtons" id="deleteQuotes">Delete All</button> -->
      <!--The delete button is there only for our testing purposes-->
-    <button id="randomQuote">Get Random Quote</button>
-    <button id="combineRandom">Combine Randomly</button>
-    <div id="json"></div>
-    <div id="done"></div>
-    <div id="quotes"></div>
+    <button class="thezeButtons" id="randomQuote">Get Random Quote</button>
+    <button class="thezeButtons" id="combineRandom">Combine Randomly</button>
+    </div>
+    <div class="output" id="json"></div>
+    <div class="output" id="done"></div>
+    <div class="output" id="quotes"></div>
 </body>
 
 </html>
